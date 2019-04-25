@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//判断a中的元素是否全为数字类型    ---用every()方法实现
+			var a=[2,4,{x:2,y:3},true,[5,6]]; 
+			var b=a.every(function(value){
+				return value.constructor === Number?true:false;
+			});
+			console.log(b);
+            //检测数组中元素的值是否在2-10之间（若num中有非数字返回false）
+			var num=[1,6,3,9];
+			var x=num.map(function(value){
+				return value>2&&value<10?true:false;
+			});
+			console.log(x);
+            //判断a中的元素是否全为数字类型---用some()方法实现
+			var c=[2,4,{x:2,y:3},true,[5,6]];
+			/* var c=['1','2','3']; */
+			var z=c.some(function(value){
+				return value.constructor === Number?true:false;
+			});
+			console.log(z);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
